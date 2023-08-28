@@ -1,0 +1,412 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0px dashed darkblue;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+:root {
+  /* Colors */
+  --primary-color: #e0e0e0;
+  --secondary-color: #57fa88;
+  --background-color: #f7f7f7;
+  --text-color: #333;
+  --text-white: #f0f8ff;
+
+  /* Font */
+  --logo-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  --font-family: Arial, Helvetica, sans-serif;
+
+  /* Button */
+  --button-bg-color: var(--primary-color);
+  --button-text-color: #333;
+
+  /* Navbar */
+  --navbar-bg-color: var(--background-color);
+  --navbar-scroll-bg-color: var(--primary-color);
+  --navbar-link-color: #fff;
+  --navbar-link-hover-color: var(--secondary-color);
+}
+
+[data-bs-theme="primary"] {
+  --bs-body-color: var(--text-color);
+  --bs-body-color-rgb: #{to-rgb($white)};
+  --bs-body-bg: var(--background-color);
+  --bs-body-bg-rgb: #f7f7f7;
+  --bs-tertiary-bg: #{$blue-600};
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+    --bs-dropdown-link-active-bg: var(--secondary-color);
+    --bs-dropdown-link-active-color: var(--text-color);
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #{mix($gray-600, $blue-400, 0.5)};
+    --bs-btn-border-color: #{rgba($white, 0.25)};
+    --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, 0.5), 5%)};
+    --bs-btn-hover-border-color: #{rgba($white, 0.25)};
+    --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, 0.5), 10%)};
+    --bs-btn-active-border-color: #{rgba($white, 0.5)};
+    --bs-btn-focus-border-color: #{rgba($white, 0.5)};
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+  }
+}
+
+html::-webkit-scrollbar {
+  width: 2px;
+}
+
+html::-webkit-scrollbar-track {
+  background: black;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: var(--primary-color);
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 2px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: red;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: black;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+}
+.bg-light {
+  background-color: var(--background-color) !important;
+}
+.card {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 0px;
+  border-bottom: 1px solid #333;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* home page */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  background-color: var(--navbar-bg-color);
+  padding: 10px;
+  transition: all 5s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: var(--navbar-scroll-bg-color) !important;
+}
+
+.brand {
+  padding: 0px 10px;
+  text-transform: uppercase;
+  font-family: var(--logo-font);
+  color: inherit !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.dropdown-menu {
+  background-color: var(--background-color);
+  /* border: none; */
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--navbar-scroll-bg-color);
+}
+section {
+  padding: 0.5rem 5%;
+  margin-bottom: 3rem !important;
+  height: auto;
+}
+
+.chili {
+  position: absolute;
+}
+.chili div img {
+  transform: translateY(-20px);
+  width: 100px;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+/* home pages */
+
+.home {
+  position: relative;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 3rem 5%;
+  z-index: 100;
+}
+/* 
+.home .content {
+  flex: 1 1 20rem;
+} */
+.home .content h3 {
+  font-family: var(--logo-font);
+  font-weight: 600;
+  filter: drop-shadow(3px 0px 0.1px rgba(0, 0, 0, 0.1));
+}
+.home .content p {
+  font-family: var(--font-family);
+  text-align: justify;
+}
+
+.home .image {
+  flex: 1 1 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 0px solid var(--text-color);
+}
+
+.home .image img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    height: auto !important;
+  }
+  .home .content {
+    width: 100%;
+  }
+  .home .image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* popular food section */
+.popular-food {
+  margin: 0px;
+}
+.popular-food .info {
+  text-align: center;
+}
+
+.popular-food .info > * {
+  margin-bottom: 20px;
+}
+
+.popular-food .card,
+recipe-container .card {
+  min-height: 380px;
+  width: auto;
+}
+
+.popular-food .card img,
+.recipe-container .card img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.popular-food .card .title,
+recipe-container .card .title {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+
+.popular-food .card .card-text,
+.recipe-container .card .card-text {
+  font-size: 14px;
+  font-family: var(--font-family);
+  padding: 3px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.popular-food .card .card-body,
+.recipe-container .card .card-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popular-food .row,
+.recipe-container .row {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+/* login screen and register screen for in a box */
+
+.login {
+  color: var(--text-color);
+  font-family: var(--logo-font);
+}
+
+.login .wrap .img {
+  width: 50%;
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-wrap {
+  width: 100%;
+}
+
+/* about us */
+.about-us-card {
+  width: 100%;
+  background-color: lightblue;
+  /* background-color: #57fa88; */
+  border-radius: 10px;
+  margin: 0px;
+  padding: 10px;
+  overflow: hidden;
+}
+.about-us-card .image-container {
+  border-radius: 0px;
+  height: 300px;
+  padding: 0;
+  overflow: hidden;
+}
+.about-us-card .image-container img {
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-us-card .content {
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  white-space: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us-card .content p:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--logo-font);
+}
+.about-us-card .content p:first-child span {
+  text-transform: uppercase;
+  padding: 0px 5px;
+}
+
+/* footer section */
+
+.footer {
+  background-color: var(--background-color);
+  transition: all 5s ease-in-out;
+}
+.footer ul {
+  list-style: none;
+}
+
+.footer.scrolled {
+  background-color: var(--navbar-scroll-bg-color) !important;
+}
+
+/* .recipe-container card */
+.recipe-card {
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+.recipe-card ul li {
+  list-style: disc;
+  font-weight: 600;
+  color: #333;
+}
+
+.recipeModal img {
+  object-fit: cover;
+  min-width: 300px;
+  width: 100%;
+  height: 300px;
+}
+
+.header-set-items {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-card{
+  display: flex;
+  flex-direction: row;
+  min-width: 300px;
+  flex-wrap: wrap;
+}
+
+.horizontal-card .title{
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--logo-font);
+}
+
+.horizontal-card .card-body{
+  flex: 1 1 50%;
+  font-size: 15px;
+}
+
+.horizontal-card img{
+  width: 100px !important;
+  flex: 1 1 50%;
+}
+.horizontal-card .card-footer{
+  border: none;
+}
