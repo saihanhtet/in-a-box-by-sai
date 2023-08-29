@@ -10,7 +10,7 @@
 
 :root {
   /* Colors */
-  --primary-color: #e0e0e0;
+  --primary-color: #ecedee;
   --secondary-color: #57fa88;
   --background-color: #f7f7f7;
   --text-color: #333;
@@ -215,19 +215,6 @@ section {
   object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  section {
-    height: auto !important;
-  }
-  .home .content {
-    width: 100%;
-  }
-  .home .image img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 /* popular food section */
 .popular-food {
   margin: 0px;
@@ -304,7 +291,8 @@ recipe-container .card .title {
 /* about us */
 .about-us-card {
   width: 100%;
-  background-color: orangered;
+  background-color: transparent;
+  box-shadow: 0px 14px 26px rgba(0, 0, 0, 0.06);
   /* background-color: #57fa88; */
   border-radius: 10px;
   margin: 0px;
@@ -322,6 +310,7 @@ recipe-container .card .title {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 .about-us-card .content {
   text-align: left;
@@ -385,28 +374,113 @@ recipe-container .card .title {
   align-items: center;
 }
 
-.horizontal-card{
+.horizontal-card {
   display: flex;
   flex-direction: row;
   min-width: 300px;
   flex-wrap: wrap;
+  background-color: whitesmoke;
 }
 
-.horizontal-card .title{
+.horizontal-card .title {
   font-size: 16px;
   font-weight: 700;
   font-family: var(--logo-font);
 }
 
-.horizontal-card .card-body{
+.horizontal-card .card-body {
   flex: 1 1 50%;
   font-size: 15px;
 }
 
-.horizontal-card img{
+.horizontal-card img {
   width: 100px !important;
   flex: 1 1 50%;
+  border: 1px solid #ccc;
 }
-.horizontal-card .card-footer{
+.horizontal-card .card-footer {
+  width: 100%;
+}
+
+.ingredients-list,
+.nutrition-list {
+  list-style-type: decimal-leading-zero;
+  font-style: oblique;
+}
+
+.scroll-box {
+  width: auto;
+  height: 300px;
+  border: 2px dashed black;
+  box-shadow: 0px 14px 26px rgba(0, 0, 0, 0.06);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.instruction {
+  line-height: 30px;
+}
+.instruction ol > * {
+  padding: 0.5rem 0.5rem;
+}
+.instruction li:nth-child(odd) {
+  background-color: #ecedee;
+}
+
+.box-shadow {
   border: none;
+  box-shadow: 0px 14px 26px rgba(0, 0, 0, 0.06);
+}
+
+.package-card {
+  width: 100%;
+}
+.package-card .d-flex {
+  height: 200px;
+  overflow: hidden;
+}
+.package-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.package-card .title-float {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: auto;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: var(--font-family);
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.package-horizontal-card .image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.package-horizontal-card {
+  width: 100%;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    height: auto !important;
+  }
+  .home .content {
+    width: 100%;
+  }
+  .home .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .package-horizontal-card{
+    flex-direction: column !important;
+  }
 }
