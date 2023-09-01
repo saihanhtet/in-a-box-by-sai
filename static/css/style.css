@@ -91,6 +91,7 @@ html::-webkit-scrollbar-thumb {
 body {
   background-color: var(--background-color);
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 .bg-light {
   background-color: var(--background-color) !important;
@@ -480,7 +481,25 @@ recipe-container .card .title {
     width: 100%;
     height: 100%;
   }
-  .package-horizontal-card{
+  .package-horizontal-card {
     flex-direction: column !important;
   }
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 400px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 400px;
+}
+
+.gmap_iframe {
+  height: 400px !important;
 }
