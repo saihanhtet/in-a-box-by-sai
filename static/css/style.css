@@ -505,7 +505,7 @@ recipe-container .card .title {
   max-height: 400px !important;
 }
 .ingredients .card {
-  background-color: var(--bs-body-bg-rgb);
+  background-color: whitesmoke;
   border: 1px solid #ccc;
   box-shadow: 14px 14px 26px rgba(0, 0, 0, 0.09);
   transition: all 3s ease-in-out;
@@ -520,6 +520,3 @@ recipe-container .card .title {
   box-shadow: inset 0px 0px 2px 1px white;
 }
 
-.premium{
-  background-color: #98ffb7;
-}
