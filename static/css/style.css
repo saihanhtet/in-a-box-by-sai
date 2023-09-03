@@ -519,3 +519,7 @@ recipe-container .card .title {
   object-fit: cover;
   box-shadow: inset 0px 0px 2px 1px white;
 }
+
+.premium{
+  background-color: #98ffb7;
+}
