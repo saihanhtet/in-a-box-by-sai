@@ -502,4 +502,20 @@ recipe-container .card .title {
 
 .gmap_iframe {
   height: 400px !important;
+  max-height: 400px !important;
+}
+.ingredients .card {
+  background-color: var(--bs-body-bg-rgb);
+  border: 1px solid #ccc;
+  box-shadow: 14px 14px 26px rgba(0, 0, 0, 0.09);
+  transition: all 3s ease-in-out;
+}
+.ingredients .card:hover{
+  border-color: #333;
+  box-shadow: none;
+}
+.ingredients .card .card-img-top {
+  height: 200px !important;
+  object-fit: cover;
+  box-shadow: inset 0px 0px 2px 1px white;
 }
