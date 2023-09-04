@@ -533,3 +533,10 @@ recipe-container .card .title {
   width: 100px !important;
   height: 100px !important;
 }
+
+.recipe-container .card {
+  background-color: #fff !important;
+}
+.recipe-container .card.premium {
+  background-color: var(--background-color) !important;
+}
