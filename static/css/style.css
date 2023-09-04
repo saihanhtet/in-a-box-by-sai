@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /*for test*/
   outline: 0px dashed darkblue;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -224,13 +224,8 @@ section {
   text-align: center;
 }
 
-.popular-food .info > * {
-  margin-bottom: 20px;
-}
-
 .popular-food .card,
-recipe-container .card {
-  min-height: 380px;
+.recipe-container .card {
   width: auto;
 }
 
@@ -510,7 +505,7 @@ recipe-container .card .title {
   box-shadow: 14px 14px 26px rgba(0, 0, 0, 0.09);
   transition: all 3s ease-in-out;
 }
-.ingredients .card:hover{
+.ingredients .card:hover {
   border-color: #333;
   box-shadow: none;
 }
@@ -520,3 +515,17 @@ recipe-container .card .title {
   box-shadow: inset 0px 0px 2px 1px white;
 }
 
+.review-box .img-container {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50%;
+  border: 1px white;
+  box-shadow: inset 0px 0px 2px 1px white;
+  overflow: hidden;
+}
+.review-box .img-container img {
+  object-fit: cover;
+  object-position: center;
+  width: 100px !important;
+  height: 100px !important;
+}
