@@ -499,19 +499,23 @@ recipe-container .card .title {
   height: 400px !important;
   max-height: 400px !important;
 }
-.ingredients .card {
+.ingredients .card,
+.bake-set .card {
   background-color: whitesmoke;
   border: 1px solid #ccc;
   box-shadow: 14px 14px 26px rgba(0, 0, 0, 0.09);
   transition: all 3s ease-in-out;
 }
-.ingredients .card:hover {
+.ingredients .card:hover,
+.bake-set .card:hover {
   border-color: #333;
   box-shadow: none;
 }
-.ingredients .card .card-img-top {
+.ingredients .card .card-img-top,
+.bake-set .card .card-img-top {
   height: 200px !important;
   object-fit: cover;
+  object-position: center;
   box-shadow: inset 0px 0px 2px 1px white;
 }
 
