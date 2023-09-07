@@ -534,6 +534,31 @@ recipe-container .card .title {
   height: 100px !important;
 }
 
+.app-card .img-container {
+  width: 100% !important;
+  height: 200px !important;
+  border-radius: 10px;
+  border: 1px white;
+  box-shadow: inset 0px 0px 2px 1px white;
+  overflow: hidden;
+}
+.app-card .img-container img {
+  object-fit: cover;
+  object-position: center;
+  width: 100% !important;
+  height: 100% !important;
+}
+.app-card p {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: normal;
+  padding: 0px 10px;
+}
+
 .recipe-container .card {
   background-color: #fff !important;
 }
