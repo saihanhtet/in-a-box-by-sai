@@ -519,6 +519,9 @@ recipe-container .card .title {
   box-shadow: inset 0px 0px 2px 1px white;
 }
 
+.bake-set .card {
+  height:  auto !important;
+}
 .review-box .img-container {
   width: 100px !important;
   height: 100px !important;
