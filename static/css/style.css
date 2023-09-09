@@ -227,6 +227,7 @@ section {
 .popular-food .card,
 .recipe-container .card {
   width: auto;
+  background-color: var(--background-color) !important;
 }
 
 .popular-food .card img,
@@ -520,7 +521,7 @@ recipe-container .card .title {
 }
 
 .bake-set .card {
-  height:  auto !important;
+  height: auto !important;
 }
 .review-box .img-container {
   width: 100px !important;
