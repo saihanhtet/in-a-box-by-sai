@@ -519,6 +519,9 @@ recipe-container .card .title {
   object-position: center;
   box-shadow: inset 0px 0px 2px 1px white;
 }
+.bake-set .card .card-img-top {
+  object-fit: contain;
+}
 
 .bake-set .card {
   height: auto !important;
