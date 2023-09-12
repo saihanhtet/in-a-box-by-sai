@@ -24,3 +24,13 @@ linksWithHash.forEach((link) => {
     }
   });
 });
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault(); 
+  const recipient = document.getElementById("email-field").value;
+  const subject = document.getElementById("reason-to-contact").value;
+  const gmailComposeUrl = `https://mail.google.com/mail/u/0/?fs=1&to=${recipient}&su=${subject}&tf=cm`;
+  window.open(gmailComposeUrl, "_blank");
+});
